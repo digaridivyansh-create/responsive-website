@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Registration</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+    <h2>CampusConnect</h2>
+    <div>
+        <a href="index.html">Home</a>
+        <a href="events.html">Events</a>
+    </div>
+</nav>
+
+<section class="form-container">
+    <h1>Event Registration</h1>
+
+    <form id="registrationForm">
+
+        <input type="hidden" id="eventName">
+
+        <label>Name</label>
+        <input type="text" id="studentName" required>
+
+        <label>Email</label>
+        <input type="email" id="studentEmail" required>
+
+        <label>College / Year</label>
+        <input type="text" id="collegeYear" placeholder="ABES / 2nd Year" required>
+
+        <label>Phone Number</label>
+        <input type="tel" id="phone" required>
+
+        <button type="submit" class="btn">Submit Registration</button>
+
+    </form>
+
+    <p id="registrationMessage"></p>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+    <h2>CampusConnect Admin</h2>
+    <div>
+        <a href="index.html">Website</a>
+        <a href="events.html">Events</a>
+    </div>
+</nav>
+
+<section class="container page">
+
+    <h1>Admin Dashboard</h1>
+
+    <div class="admin-grid">
+
+        <div class="admin-form">
+            <h2>Add / Edit Event</h2>
+
+            <input type="hidden" id="editId">
+
+            <input type="text" id="eventTitle" placeholder="Event Name">
+
+            <input type="date" id="eventDate">
+
+            <input type="time" id="eventTime">
+
+            <input type="text" id="eventVenue" placeholder="Venue">
+
+            <select id="eventCategory">
+                <option value="Technical">Technical</option>
+                <option value="Cultural">Cultural</option>
+                <option value="Sports">Sports</option>
+                <option value="Workshop">Workshop</option>
+            </select>
+
+            <textarea id="eventDescription" placeholder="Event Description"></textarea>
+
+            <button onclick="saveEvent()" class="btn">Save Event</button>
+        </div>
+
+        <div>
+            <h2>Manage Events</h2>
+            <div id="adminEvents"></div>
+        </div>
+
+    </div>
+
+    <hr>
+
+    <h2>Registered Students</h2>
+
+    <input
+        type="text"
+        id="registrationSearch"
+        placeholder="Search registered students..."
+        onkeyup="displayRegistrations()"
+    >
+
+    <div class="table-wrapper">
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>College / Year</th>
+                    <th>Phone</th>
+                    <th>Event</th>
+                </tr>
+            </thead>
+
+            <tbody id="registrationTable"></tbody>
+        </table>
+    </div>
+
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>

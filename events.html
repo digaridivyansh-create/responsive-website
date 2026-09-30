@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events | CampusConnect</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+    <h2>CampusConnect</h2>
+    <div>
+        <a href="index.html">Home</a>
+        <a href="events.html">Events</a>
+        <a href="admin.html">Admin</a>
+    </div>
+</nav>
+
+<section class="container page">
+    <h1>College Events</h1>
+
+    <div class="filters">
+        <input type="text" id="searchEvent" placeholder="Search events by name...">
+
+        <select id="categoryFilter">
+            <option value="all">All Categories</option>
+            <option value="Technical">Technical</option>
+            <option value="Cultural">Cultural</option>
+            <option value="Sports">Sports</option>
+            <option value="Workshop">Workshop</option>
+        </select>
+    </div>
+
+    <div id="allEvents" class="event-grid"></div>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
